@@ -108,7 +108,7 @@ void MediaController::handleError(const QString& error) {
 void MediaController::handleExit() {
     client->stop();
     emit displayMessage("Exiting application.");
-    QCoreApplication::exec();
+    QCoreApplication::quit();
 }
 
 void MediaController::processCommand(const QString& cmd, const QStringList& args) {
